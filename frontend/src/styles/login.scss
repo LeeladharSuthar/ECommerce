@@ -1,0 +1,64 @@
+.login {
+    height: 90vh;
+    @include flex(column);
+
+    >main {
+        width: 80%;
+        height: 90%;
+        max-width: 400px;
+        padding: 2rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.384);
+        @include flex(column, center, center);
+        >.heading{
+            @include heading();
+            margin: 1rem 0;
+            text-align: center;
+        }
+        >div {
+            width: 100%;
+            @include flex(column, center, strecth, 2rem);
+
+            >div >input {
+                @include inputStyle(100%, 1rem, inherit, 1px solid rgba(31, 31, 31, 0.351));
+                font-size: 1.05rem;
+                border-radius: 5px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            >p {
+                text-align: center;
+                margin: 1rem;
+            }
+
+            >button {
+                width: 70%;
+                margin: auto;
+                height: 3rem;
+                border: none;
+                outline: none;
+                background-color: $color3;
+                color: $color1;
+                text-transform: uppercase;
+                cursor: pointer;
+                border-radius: 5px;
+                padding: unset;
+                @include flex();
+                font-size: 1.05rem;
+                >svg{
+                    background-color: #fff;
+                    width: 30%;
+                    height: 100%;
+                }
+
+                >span{
+                    width: 100%;
+                    text-align: center;
+                }
+                &:hover {
+                    opacity: 0.8;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.384);
+                }
+            }
+        }
+    }
+}
